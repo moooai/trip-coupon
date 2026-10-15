@@ -21,6 +21,18 @@ python scripts/fetch_coupons.py
 python scripts/fetch_coupons.py --json
 ```
 
+## 领取页面示例
+
+扫码或点击领取链接后看到的礼包页面：
+
+**滴滴出行大礼包**（打车红包 + 滴滴代驾/花小猪券）：
+
+![滴滴出行大礼包领取页](assets/trip-sample1.png)
+
+**酒店优惠券**（美团/同程/飞猪酒店券 + 打车券聚合页）：
+
+![酒店优惠券领取页](assets/trip-sample2.png)
+
 ## 重要说明
 
 - API 请求自动附加 `ch` / `u` 归因参数（匿名安装标识，用于渠道统计）
