@@ -11,7 +11,7 @@
 
 ## 接口说明
 
-获取出行优惠券列表，包括滴滴出行大礼包（打车券天天领）、携程礼包天天领（酒店、机票、门票），以及「更多优惠券」公众号领券入口。
+获取出行优惠券列表，包括滴滴出行大礼包（打车券天天领）、酒店优惠大礼包（住宿出行天天领），以及「更多优惠券」公众号领券入口。
 
 ## 请求示例
 
@@ -27,14 +27,14 @@ GET https://agskills.moontai.top/coupon/trip
 [
   {
     "title": "滴滴出行大礼包，打车券天天领",
-    "coupon_url": "https://open.cdyunzhanxinxi.com/link/100115769b7d6d0087771002k13YX0SY",
-    "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/coupon-trip.png",
+    "coupon_url": "https://h5.sichuanyunzhan.com/pages_single/didi/index?platform=singlePage&pid=e467cdcafe2b1791cdfc&accountsId=nEjX0zy4Zmyq",
+    "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/didi-64c76f2b-0bf5-483f-beb9-57061c31f3e0.png",
     "guideline": "点击链接领券(建议用微信打开)，或使用微信扫描二维码领券"
   },
   {
-    "title": "携程礼包天天领，酒店、机票、门票",
-    "coupon_url": "https://open.cdyunzhanxinxi.com/link/100012769b7d927254211000c1x1UOrw",
-    "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/trip-xiecheng.png",
+    "title": "酒店优惠大礼包，住宿出行天天领",
+    "coupon_url": "https://h5.sichuanyunzhan.com/pages_single/hotel/index?platform=singlePage&pid=e467cdcafe2b1791cdfc&accountsId=nEjX0zy4Zmyq",
+    "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/hotel-661139fb-17c1-4b88-a42b-7a02054af1b5.png",
     "guideline": "点击链接领券(建议用微信打开)，或使用微信扫描二维码领券"
   },
   {
@@ -42,8 +42,7 @@ GET https://agskills.moontai.top/coupon/trip
     "coupon_h5_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/qrcode_for_gh.jpg",
     "guideline": "可以使用微信扫码后领券。关注不迷路，天天领券！"
   }
-]
-```
+]```
 
 ## 响应参数
 
