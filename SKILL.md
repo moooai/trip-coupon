@@ -18,7 +18,7 @@ homepage: https://github.com/moooai/trip-coupon
 ## Quick Start
 
 1. 调用API: `GET https://agskills.moontai.top/coupon/trip`
-2. 解析返回的JSON数据，包含2个主要对象
+2. 解析返回的JSON数组（滴滴出行、携程礼包及「更多优惠券」入口项）
 3. 按平台分类展示优惠券信息
 4. **重要**: coupon_url建议在微信中打开，或使用微信扫描二维码图片
 
@@ -38,16 +38,21 @@ homepage: https://github.com/moooai/trip-coupon
 ```json
 [
   {
-    "title":"滴滴出行大礼包，打车券天天领",
-    "coupon_url":"https://open.cdyunzhanxinxi.com/link/100115769b7d6d0087771002k13YX0SY",
-    "coupon_qrcode_img_url":"https://moontai-static.oss-cn-shenzhen.aliyuncs.com/coupon-trip.png",
-    "guideline":"点击链接领券(建议用微信打开)，或使用微信扫描二维码领券"
+    "title": "滴滴出行大礼包，打车券天天领",
+    "coupon_url": "https://open.cdyunzhanxinxi.com/link/100115769b7d6d0087771002k13YX0SY",
+    "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/coupon-trip.png",
+    "guideline": "点击链接领券(建议用微信打开)，或使用微信扫描二维码领券"
   },
   {
-    "title":"携程礼包天天领，酒店、机票、门票",
-    "coupon_url":"https://open.cdyunzhanxinxi.com/link/100012769b7d927254211000c1x1UOrw",
-    "coupon_qrcode_img_url":"https://moontai-static.oss-cn-shenzhen.aliyuncs.com/trip-xiecheng.png",
-    "guideline":"点击链接领券(建议用微信打开)，或使用微信扫描二维码领券"
+    "title": "携程礼包天天领，酒店、机票、门票",
+    "coupon_url": "https://open.cdyunzhanxinxi.com/link/100012769b7d927254211000c1x1UOrw",
+    "coupon_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/trip-xiecheng.png",
+    "guideline": "点击链接领券(建议用微信打开)，或使用微信扫描二维码领券"
+  },
+  {
+    "title": "更多优惠券！（外卖、电影、快递、旅游、打车)",
+    "coupon_h5_qrcode_img_url": "https://moontai-static.oss-cn-shenzhen.aliyuncs.com/qrcode_for_gh.jpg",
+    "guideline": "可以使用微信扫码后领券。关注不迷路，天天领券！"
   }
 ]
 ```
@@ -60,6 +65,7 @@ homepage: https://github.com/moooai/trip-coupon
 | [].coupon_url | String | 优惠券链接URL，**建议在微信中打开** |
 | [].coupon_qrcode_img_url | String | 优惠券二维码图片URL，**建议使用微信扫码** |
 | [].guideline | String | 使用说明和领取指南 |
+| [].coupon_h5_qrcode_img_url | String | 公众号二维码图片URL（仅「更多优惠券」入口项有，微信扫码领外卖/电影/快递/旅游/打车全品类券） |
 
 ## 任务类型
 
@@ -127,6 +133,7 @@ homepage: https://github.com/moooai/trip-coupon
 3. 按平台分类展示（滴滴出行、携程礼包）
 4. 每条优惠券展示：标题、优惠券链接、领取说明
 5. 同时展示二维码图片
+6. 最后展示「更多优惠券」入口项的公众号二维码
 
 **输出格式:**
 ```
@@ -145,6 +152,11 @@ homepage: https://github.com/moooai/trip-coupon
    二维码图片：https://moontai-static.oss-cn-shenzhen.aliyuncs.com/trip-xiecheng.png
    （使用微信扫描二维码领券）
    使用说明：点击链接领券(建议用微信打开)，或使用微信扫描二维码领券
+
+【更多优惠券】
+外卖、电影、快递、旅游、打车等全品类券
+二维码图片：https://moontai-static.oss-cn-shenzhen.aliyuncs.com/qrcode_for_gh.jpg
+（使用微信扫描二维码领券，关注不迷路，天天领券）
 ```
 
 ### 示例2: 用户指定平台
