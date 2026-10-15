@@ -3,7 +3,7 @@ name: trip-coupon
 display_name: 出行优惠券-支持滴滴出行、携程礼包（机票、酒店、门票）
 description: 获取出行优惠券，支持滴滴出行大礼包、携程礼包天天领（酒店、机票、门票）。返回领取链接和二维码图片，用户可点击链接或扫描二维码在微信中领取优惠。
 english_description: Call trip/travel coupon API to fetch travel coupons including DiDi ride-hailing and Ctrip gift packages (flights, hotels, tickets). Returns coupon links and QR code images for users to redeem via WeChat.
-version: 1.0.0
+version: 2.0.0
 author: moooai
 permissions: 网络访问权限（调用出行优惠券API）
 homepage: https://github.com/moooai/trip-coupon
